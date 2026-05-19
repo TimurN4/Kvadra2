@@ -36,5 +36,10 @@ cd sys-monitor
 # Флаги отключают лишние сетевые проверки аудита, чтобы ничего не зависало.
 npm install --no-audit --no-fund
 
+npm install chart.js
+
 
 npm run dev -- --host
+npm run dev -- --host 0.0.0.0
+
+./build-debug/Kvadra2_service --config ./configs/static_config.yaml --config_vars ./configs/config_vars.yaml

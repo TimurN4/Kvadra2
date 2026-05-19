@@ -1,0 +1,114 @@
+:root {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent-green: #22c55e;
+  --accent-red: #ef4444;
+  --accent-blue: #3b82f6;
+  --font-mono: 'Courier New', Courier, monospace;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-mono);
+}
+
+h1, h2 {
+  margin-top: 0;
+  color: var(--accent-green);
+}
+
+.dashboard {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--card-bg);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.status-indicator span {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.status-indicator .online { background: var(--accent-green); color: #000; }
+.status-indicator .offline { background: var(--accent-red); color: #fff; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* CPU Grid */
+.cores-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.core-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.core-name {
+  width: 50px;
+  color: var(--text-muted);
+}
+
+/* Progress Bars */
+progress {
+  flex-grow: 1;
+  height: 12px;
+  appearance: none;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #334155;
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--accent-green);
+  transition: width 0.3s ease;
+}
+
+/* Change color to red if usage is high */
+progress.high-usage::-webkit-progress-value {
+  background-color: var(--accent-red);
+}
+
+.bar-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #334155;
+}

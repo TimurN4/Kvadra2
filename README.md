@@ -1,34 +1,52 @@
 # Kvadra2_service
 
-Template of a C++ service that uses [userver framework](https://github.com/userver-framework/userver).
-
+Шаблон C++ сервиса который использует [userver framework](https://github.com/userver-framework/userver).
 
 ## Download and Build
 
+Чтобы использовать проект нужно иметь docker, все зависимости уже установлены в devcontainer.
+
+# Настройка BACKEND
+
+## Запускаем новый терминал
+
+### Создаем дерево проекта 
+1. make cmake-debug
+
+### Сборка проекта
+2. make build-debug
+
+### Запуск сервера
+3. ./build-debug/Kvadra2_service --config ./configs/static_config.yaml --config_vars ./configs/config_vars.yaml
+
+# Настройка FRONTEND
+
+## Запускаем новый терминал
+
+### Клонирование репозитория
+1. git clone https://github.com/TimurN4/Kvadra2.git && cd Kvadra2_service
+
+### Запуск проекта в devcontainer
+2. ctrl + shirft + P и в панели выбрать Dev Containers: Reopen in Container
+
+### Настраиваем официальный репозиторий Node.js версии 20.x
+3. curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+
+### Устанавливает Node.js в вашу систему Linux 
+4. sudo apt install -y nodejs
+
+### Устанавливаем зависимости проекта
+5. npm install --no-audit --no-fund
+
+### Запускаем FRONTEND
+6. npm run dev -- --host
+
+### Открываем страничку в браузере с метриками
+7. http://localhost:5173/
+
+P.S: Если npm run dev -- --host перестал работать нужно пересобрать проект: npm install --no-audit --no-fund а потом опять npm run dev -- --host
+
 To create your own userver-based service follow the following steps:
-
-1. Press the "Use this template button" at the top right of this GitHub page
-2. Clone the service `git clone your-service-repo && cd your-service-repo && git submodule update --init`
-3. Give a proper name to your service and replace all the occurrences of "Kvadra2_service" string with that name
-4. Feel free to tweak, adjust or fully rewrite the source code of your service.
-
-
-## Makefile
-
-`PRESET` is either `debug`, `release`, or if you've added custom presets in `CMakeUserPresets.json`, it
-can also be `debug-custom`, `release-custom`.
-
-* `make cmake-PRESET` - run cmake configure, update cmake options and source file lists
-* `make build-PRESET` - build the service
-* `make test-PRESET` - build the service and run all tests
-* `make start-PRESET` - build the service, start it in testsuite environment and leave it running
-* `make install-PRESET` - build the service and install it in directory set in environment `PREFIX`
-* `make` or `make all` - build and run all tests in `debug` and `release` modes
-* `make format` - reformat all C++ and Python sources
-* `make dist-clean` - clean build files and cmake cache
-* `make docker-COMMAND` - run `make COMMAND` in docker environment
-* `make docker-clean-data` - stop docker containers
-
 
 ## License
 
