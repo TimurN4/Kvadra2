@@ -6,18 +6,7 @@
 
 Чтобы использовать проект нужно иметь docker, все зависимости уже установлены в devcontainer.
 
-# Настройка BACKEND
 
-## Запускаем новый терминал
-
-### Создаем дерево проекта 
-1. make cmake-debug
-
-### Сборка проекта
-2. make build-debug
-
-### Запуск сервера
-3. ./build-debug/Kvadra2_service --config ./configs/static_config.yaml --config_vars ./configs/config_vars.yaml
 
 # Настройка FRONTEND
 
@@ -32,7 +21,7 @@
 ### Настраиваем официальный репозиторий Node.js версии 20.x
 3. curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 
-### Устанавливает Node.js в вашу систему Linux 
+### Устанавливаем Node.js в Linux 
 4. sudo apt install -y nodejs
 
 ### Устанавливаем зависимости проекта
@@ -46,7 +35,18 @@
 
 P.S: Если npm run dev -- --host перестал работать нужно пересобрать проект: npm install --no-audit --no-fund а потом опять npm run dev -- --host
 
-To create your own userver-based service follow the following steps:
+# Настройка BACKEND
+
+## Запускаем новый терминал
+
+### Создаем дерево проекта 
+1. make cmake-debug
+
+### Сборка проекта
+2. make build-debug
+
+### Запуск сервера
+3. ./build-debug/Kvadra2_service --config ./configs/static_config.yaml --config_vars ./configs/config_vars.yaml
 
 ## License
 
