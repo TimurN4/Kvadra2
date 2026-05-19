@@ -38,7 +38,7 @@
 ### Запускаем FRONTEND
 4. npm run dev -- --host
 
-### Открываем страничку в браузере с метриками
+### Открываем страничку с метриками в браузере
 5. http://localhost:5173/
 
 P.S: Если npm run dev -- --host перестал работать нужно пересобрать проект: npm install --no-audit --no-fund а потом опять npm run dev -- --host
