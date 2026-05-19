@@ -9,7 +9,7 @@
 ### Клонирование репозитория
 1. git clone https://github.com/TimurN4/Kvadra2.git && cd Kvadra2_service
 
-### Запуск проекта в devcontainer
+### Запуск проекта в devcontainer(VS CODE)
 2. ctrl + shirft + P и в панели выбрать Dev Containers: Reopen in Container
 
 # Настройка BACKEND
