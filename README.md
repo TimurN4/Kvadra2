@@ -67,9 +67,9 @@ IPC: Для передачи данных между бэкендом и фро�
 
 ## Фото работы проекта
 
-![service](images/Снимок экрана 2026-05-21 130412.png)
+![service](images/Userver1.png)
 
-![service](images/2.png)
+![service](images/Userver2.png)
 
 ## License
 
