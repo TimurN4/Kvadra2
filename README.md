@@ -65,6 +65,12 @@ Frontend: Реализован на стеке HTML5 + CSS3 + TypeScript с ис
 
 IPC: Для передачи данных между бэкендом и фронтендом используется протокол WebSocket, обеспечивающий минимальную задержку при обновлении метрик.
 
+## Фото работы проекта
+
+![service](images/Снимок экрана 2026-05-21 130412.png)
+
+![service](images/2.png)
+
 ## License
 
 The original template is distributed under the [Apache-2.0 License](https://github.com/userver-framework/userver/blob/develop/LICENSE)
