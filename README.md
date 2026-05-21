@@ -26,6 +26,7 @@
 ## Настройка FRONTEND
 ## Запускаем новый терминал
 
++ Изначально в dev container не было Node.js поэтому сначала скачаем его 
 ### Настраиваем официальный репозиторий Node.js версии 20.x
 1. curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 
@@ -33,7 +34,7 @@
 2. sudo apt install -y nodejs
 
 ### Устанавливаем зависимости проекта
-3. npm install --no-audit --no-fund
+3. cd frontend && npm install --no-audit --no-fund
 
 ### Запускаем FRONTEND
 4. npm run dev -- --host
@@ -41,7 +42,7 @@
 ### Открываем страничку с метриками в браузере
 5. http://localhost:5173/
 
-P.S: Если npm run dev -- --host перестал работать нужно пересобрать проект: npm install --no-audit --no-fund а потом опять npm run dev -- --host
+P.S: Если npm run dev -- --host перестал работать нужно пересобрать проект: npm install --no-audit --no-fund(из папки frontend) а потом опять npm run dev -- --host
 
 # Описание проекта 
 
