@@ -12,7 +12,7 @@
 ### Запуск проекта в devcontainer(VS CODE)
 2. ctrl + shirft + P и в панели выбрать Dev Containers: Reopen in Container
 
-## Настройка BACKEND
+## Настройки BACKEND
 
 ### Создаем дерево проекта 
 1. make cmake-debug
@@ -23,7 +23,7 @@
 ### Запуск сервера
 3. ./build-debug/Kvadra2_service --config ./configs/static_config.yaml --config_vars ./configs/config_vars.yaml
 
-## Настройка FRONTEND
+## Настройки FRONTEND
 ## Запускаем новый терминал
 
 + Изначально в dev container не было Node.js поэтому сначала скачаем его 
