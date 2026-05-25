@@ -183,7 +183,11 @@ void parseRAM(userver::formats::json::ValueBuilder& json) {
             ss >> line >> num; line.pop_back();
             fillRAMfild(ram, line, num);
         }
-        ram.memory_usage = 100.0 * (ram.MemTotal - ram.MemAvailable) / ram.MemTotal; // was wrong (ram.MemFree / ram.MemTotal)
+        if (ram.MemTotal > 0) {
+            ram.memory_usage = 100.0 * (ram.MemTotal - ram.MemAvailable) / ram.MemTotal;
+        } else {
+            ram.memory_usage = 0.0;
+        } // was wrong (ram.MemFree / ram.MemTotal)
     }
 
     json["RAM"] = ram;

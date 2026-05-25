@@ -6,34 +6,34 @@
 namespace parser {
 
 struct Battery {
-    std::string power;
-    std::string charging_status;
+    std::string power{};
+    std::string charging_status{};
 };
 
 struct CpuTicks {
-    std::string name;
-    unsigned long long user;
-    unsigned long long nice;
-    unsigned long long system;
-    unsigned long long idle;
-    unsigned long long iowait;
-    unsigned long long irq;
-    unsigned long long softirq;
-    unsigned long long steal;
-    unsigned long long guest;
-    unsigned long long guest_nice;
+    std::string name{};
+    unsigned long long user{0};
+    unsigned long long nice{0};
+    unsigned long long system{0};
+    unsigned long long idle{0};
+    unsigned long long iowait{0};
+    unsigned long long irq{0};
+    unsigned long long softirq{0};
+    unsigned long long steal{0};
+    unsigned long long guest{0};
+    unsigned long long guest_nice{0};
 
-    double cpu_usage;
+    double cpu_usage{0};
 };
 
 struct RAM {
-    unsigned long long MemTotal;
-    unsigned long long MemFree;
-    unsigned long long MemAvailable;
-    unsigned long long Buffers;
-    unsigned long long Cached;
+    unsigned long long MemTotal{0};
+    unsigned long long MemFree{0};
+    unsigned long long MemAvailable{0};
+    unsigned long long Buffers{0};
+    unsigned long long Cached{0};
 
-    double memory_usage;
+    double memory_usage{0.0};
 };
 
 userver::formats::json::Value
